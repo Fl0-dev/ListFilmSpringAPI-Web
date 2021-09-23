@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>DVDStore</title>
+</head>
+<body>
+<H1>DVDStore : Détails du film</H1>
+    <h3 th:text="${film.titre}"></h3>
+    <span th:text="${film.genre}"></span>
+    <p th:text="${film.description}"></p>
+</body>
+</html>
