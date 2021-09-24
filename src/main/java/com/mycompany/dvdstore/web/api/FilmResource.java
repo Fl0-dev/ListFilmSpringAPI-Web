@@ -36,7 +36,7 @@ public class FilmResource {
     }
 
     @GetMapping//indique vers quelle url
-    public List<Film> list(){ //indique qu'il y aura une liste de films en objet
+    public Iterable<Film> list(){ //indique qu'il y aura une liste de films en objet
         //récupération des films et
         //envoie en attribut de la requête l'objet
         return filmService.getFilmList();
