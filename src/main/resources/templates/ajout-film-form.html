@@ -36,6 +36,15 @@
         <div th:if="${#fields.hasErrors('genre')}" th:errors="*{genre}"></div>
         <br>        <br>
 
+        <h3>Acteur principal :</h3>
+        <label for="firstName">Prénom</label>
+        <input type="text" id="firstName" th:field="*{firstName}">
+        <div th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}"></div>
+        <br>        <br>
+        <label for="lastName">Nom</label>
+        <input type="text" id="lastName" th:field="*{lastName}">
+        <div th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}"></div>
+        <br>        <br>
 
         <label for="description">Description :</label>
         <textarea id="description" th:field="*{description}"></textarea>

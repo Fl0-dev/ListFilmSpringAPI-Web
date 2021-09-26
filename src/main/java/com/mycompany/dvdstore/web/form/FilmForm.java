@@ -15,6 +15,11 @@ public class FilmForm {
     private String genre;
     @Length(max=255, message = "Pas plus de 255 caractères")
     private String description;
+    @NotBlank(message = "Veuillez entrer le prénom de l'acteur principal")
+    @Length(message = "Pas plus de 20 caractères")
+    private String firstName;
+    @Length(message = "Pas plus de 20 caractères")
+    private String lastName;
 
     public String getTitre() {
         return titre;
@@ -45,5 +50,21 @@ public class FilmForm {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 }

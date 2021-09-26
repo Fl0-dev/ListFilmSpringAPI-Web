@@ -1,5 +1,6 @@
 package com.mycompany.dvdstore.web.controller;
 
+import com.mycompany.dvdstore.entity.Acteur;
 import com.mycompany.dvdstore.entity.Film;
 import com.mycompany.dvdstore.service.FilmServiceInterface;
 import com.mycompany.dvdstore.web.form.FilmForm;
@@ -40,7 +41,11 @@ public class FilmController {
         if (bindingResult.hasErrors()){
             return "ajout-film-form";
         }
+        Acteur acteur =new Acteur();
+        acteur.setFirstName(filmForm.getFirstName());
+        acteur.setLastName(filmForm.getLastName());
         Film film = new Film();
+        film.setMainActeur(acteur);
         film.setTitre(filmForm.getTitre());
         film.setGenre(filmForm.getGenre());
         film.setDescription(filmForm.getDescription());
